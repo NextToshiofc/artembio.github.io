@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bio | Artem</title>
+    <style>
+        :root {
+            --accent: #ff003c; /* Неоновый красный/розовый */
+            --bg: #050505;
+            --card-bg: rgba(255, 255, 255, 0.05);
+            --border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            background-color: var(--bg);
+            color: #e0e0e0;
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            margin: 0;
+            padding: 20px;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 500px;
+            animation: fadeIn 0.8s ease-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .card {
+            background: var(--card-bg);
+            backdrop-filter: blur(10px);
+            border: 1px solid var(--border);
+            border-radius: 16px;
+            padding: 24px;
+            margin-bottom: 20px;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.5);
+        }
+
+        h2 {
+            margin-top: 0;
+            font-size: 1.2rem;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            color: var(--accent);
+            border-bottom: 1px solid var(--border);
+            padding-bottom: 10px;
+        }
+
+        .info-row {
+            margin: 10px 0;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .label { color: #888; }
+        .value { font-weight: 500; }
+
+        .device-list, .hardware-list {
+            list-style: none;
+            padding: 0;
+        }
+
+        .device-list li {
+            background: rgba(255,255,255,0.03);
+            padding: 10px;
+            border-radius: 8px;
+            margin-bottom: 8px;
+            border-left: 3px solid var(--accent);
+        }
+
+        .btn-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 10px;
+        }
+
+        .btn {
+            text-decoration: none;
+            color: white;
+            background: var(--card-bg);
+            border: 1px solid var(--border);
+            padding: 12px;
+            border-radius: 8px;
+            text-align: center;
+            transition: 0.3s;
+            font-size: 0.9rem;
+        }
+
+        .btn:hover {
+            background: var(--accent);
+            border-color: var(--accent);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 15px rgba(255, 0, 60, 0.3);
+        }
+
+        .warning {
+            font-size: 0.8rem;
+            color: #666;
+            text-align: center;
+            margin-top: 20px;
+            font-style: italic;
+        }
+
+        .highlight { color: var(--accent); }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="card">
+        <h2>Обо мне</h2>
+        <div class="info-row"><span class="label">Имя:</span> <span class="value">Артём</span></div>
+        <div class="info-row"><span class="label">Возраст:</span> <span class="value">15 лет</span></div>
+        <div class="info-row"><span class="label">Увлечение:</span> <span class="value highlight">Вайбкодинг</span></div>
+        <p style="font-size: 0.9rem; margin-top: 15px; color: #bbb;">
+            📲 Прошивка девайсов<br>
+            🛠 Ремонт и восстановление смартфонов
+        </p>
+    </div>
+
+    <div class="card">
+        <h2>Мои смартфоны</h2>
+        <ul class="device-list">
+            <li>📱 Redmi 13C (4/128)</li>
+            <li>📱 Redmi 9A</li>
+            <li>📱 Samsung A04E2F</li>
+        </ul>
+    </div>
+
+    <div class="card">
+        <h2>Конфигурация</h2>
+        <p><strong>🖥 PC:</strong> RTX 4060 | Ryzen 5 5500 | 32GB RAM</p>
+        <p><strong>💻 Laptop:</strong> RTX 2050 | i5 12450H | 8GB RAM</p>
+    </div>
+
+    <div class="card">
+        <h2>Контакты</h2>
+        <div class="btn-container">
+            <a href="https://www.tiktok.com/@Lu6rux" class="btn" target="_blank">TikTok</a>
+            <a href="https://t.me/dathl34" class="btn" target="_blank">Telegram</a>
+            <a href="mailto:nexttoshiofc@gmail.com" class="btn" target="_blank">Gmail</a>
+            <a href="https://t.me/NoMetaPlease" class="btn" target="_blank">Meta (TG)</a>
+        </div>
+    </div>
+
+    <div class="warning">
+        ⚠️ С угрозами не писать. На докс/деанон/сват абсолютно всё равно.
+    </div>
+</div>
+
+</body>
+</html>
